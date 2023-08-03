@@ -1,6 +1,6 @@
 {
-  "name": "vendor/your-package-name",
-  "description": "A brief description of your package.",
+  "name": "falmar/dual-linked-list",
+  "description": "A sorted linked lis can be either integers or strings.",
   "type": "library",
   "require": {
     "php": "^8.2"
@@ -20,8 +20,8 @@
   },
   "authors": [
     {
-      "name": "Your Name",
-      "email": "youremail@example.com"
+      "name": "David Lavieri",
+      "email": "david@lavieri.dev"
     }
   ],
   "license": "MIT"
