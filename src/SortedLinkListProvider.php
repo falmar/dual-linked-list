@@ -9,7 +9,7 @@ class SortedLinkListProvider
 {
     public static function makeList(
         ListTypeEnum $type,
-        OrderEnum $order = OrderEnum::DESCENDING
+        OrderEnum $order = OrderEnum::ASCENDING
     ): SortedLinkListInterface {
         if ($type === ListTypeEnum::UNKNOWN) {
             throw new Exceptions\InvalidTypeException('invalid type. unknown type.');
