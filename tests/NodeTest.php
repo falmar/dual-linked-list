@@ -16,17 +16,13 @@ class NodeTest extends TestCase
 
         $this->assertInstanceOf(\falmar\DualSortedLinkList\Node::class, $node->next);
         $this->assertEquals(2, $node->next->value);
+        $this->assertEquals($next, $node->next);
     }
 
     public function testGetValueInt()
     {
         $node = new \falmar\DualSortedLinkList\Node(1);
         $this->assertEquals(1, $node->value);
-
-        // causes deprecation warning, but test passes
-        // reason: float loses precision when cast to int
-        // $node = new \falmar\DualSortedLinkList\Node(1.1);
-        // $this->assertEquals(1, $node->getValue());
     }
 
     public function testGetValueString()
