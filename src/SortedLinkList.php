@@ -11,7 +11,7 @@ class SortedLinkList implements SortedLinkListInterface
     protected ?Node $head = null;
     protected ?Node $tail = null;
 
-    public function __construct(ListTypeEnum $type)
+    public function __construct(?ListTypeEnum $type = null)
     {
         $this->type = $type;
     }
