@@ -15,8 +15,6 @@ $ composer require falmar/dual-linked-list
 
 When the provider is not used, the sorted link list can be instantiated directly. the type of value can be either string or integer and will be defined as soon the first value is added, however I prefer to use a ServiceProvider style class to create the sorted link list instead.
 
-```php
-
 The provided interface:
 
 ```php
