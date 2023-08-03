@@ -4,8 +4,6 @@ namespace falmar\DualSortedLinkList\Tests;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
 use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
-use falmar\DualSortedLinkList\Node;
-use falmar\DualSortedLinkList\SortedLinkList;
 use PHPUnit\Framework\TestCase;
 
 class StringSortedListListTest extends TestCase
