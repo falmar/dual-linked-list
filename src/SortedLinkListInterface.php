@@ -2,11 +2,14 @@
 
 namespace falmar\DualSortedLinkList;
 
+use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
+
 interface SortedLinkListInterface
 {
     /**
      * Insert a value into the sorted link list.
      * @param string|int $value
+     * @throws InvalidTypeException
      */
     public function insert(string|int $value): Node;
 
