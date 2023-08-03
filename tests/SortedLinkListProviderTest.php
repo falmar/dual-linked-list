@@ -26,7 +26,8 @@ class SortedLinkListProviderTest extends \PHPUnit\Framework\TestCase
 
     public function testMakeInvalidList()
     {
-        $this->expectException(\falmar\DualSortedLinkList\Exceptions\InvalidType::class);
+        // just for correctness
+        $this->expectException(\falmar\DualSortedLinkList\Exceptions\InvalidTypeException::class);
         \falmar\DualSortedLinkList\SortedLinkListProvider::makeList(
             type: \falmar\DualSortedLinkList\Enums\ListTypeEnum::UNKNOWN
         );

@@ -2,7 +2,7 @@
 
 namespace falmar\DualSortedLinkList\Exceptions;
 
-class InvalidType extends \InvalidArgumentException
+class InvalidTypeException extends \InvalidArgumentException
 {
 
 }

@@ -5,12 +5,6 @@ namespace falmar\DualSortedLinkList;
 interface SortedLinkListInterface
 {
     /**
-     * Get the head node of the sorted link list.
-     * @return Node|null
-     */
-    public function getHead(): ?Node;
-
-    /**
      * Insert a value into the sorted link list.
      * @param string|int $value
      */
