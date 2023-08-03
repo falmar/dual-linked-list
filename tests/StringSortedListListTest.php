@@ -3,12 +3,13 @@
 namespace falmar\DualSortedLinkList\Tests;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
+use falmar\DualSortedLinkList\Enums\OrderTypeEnum;
 use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
 use PHPUnit\Framework\TestCase;
 
 class StringSortedListListTest extends TestCase
 {
-    public function testInsert()
+    public function testAscInsert()
     {
         $list = new TestableSortedLinkList(ListTypeEnum::STRING);
 
@@ -21,7 +22,20 @@ class StringSortedListListTest extends TestCase
         $this->assertEquals('c', $list->getHead()->next->next->value);
     }
 
-    public function testInsertReverse()
+    public function testAscInsertRandom()
+    {
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING);
+
+        $list->insert('c');
+        $list->insert('a');
+        $list->insert('b');
+
+        $this->assertEquals('a', $list->getHead()->value);
+        $this->assertEquals('b', $list->getHead()->next->value);
+        $this->assertEquals('c', $list->getHead()->next->next->value);
+    }
+
+    public function testAscInsertReverse()
     {
         $list = new TestableSortedLinkList(ListTypeEnum::STRING);
 
@@ -32,6 +46,45 @@ class StringSortedListListTest extends TestCase
         $this->assertEquals('a', $list->getHead()->value);
         $this->assertEquals('b', $list->getHead()->next->value);
         $this->assertEquals('c', $list->getHead()->next->next->value);
+    }
+
+    public function testDescInsert()
+    {
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+
+        $list->insert('a');
+        $list->insert('b');
+        $list->insert('c');
+
+        $this->assertEquals('c', $list->getHead()->value);
+        $this->assertEquals('b', $list->getHead()->next->value);
+        $this->assertEquals('a', $list->getHead()->next->next->value);
+    }
+
+    public function testDescInsertRandom()
+    {
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+
+        $list->insert('b');
+        $list->insert('c');
+        $list->insert('a');
+
+        $this->assertEquals('c', $list->getHead()->value);
+        $this->assertEquals('b', $list->getHead()->next->value);
+        $this->assertEquals('a', $list->getHead()->next->next->value);
+    }
+
+    public function testDescInsertReverse()
+    {
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+
+        $list->insert('c');
+        $list->insert('b');
+        $list->insert('a');
+
+        $this->assertEquals('c', $list->getHead()->value);
+        $this->assertEquals('b', $list->getHead()->next->value);
+        $this->assertEquals('a', $list->getHead()->next->next->value);
     }
 
     public function testInsertEmpty()
