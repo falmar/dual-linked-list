@@ -2,7 +2,7 @@
 
 namespace falmar\DualSortedLinkList\Enums;
 
-enum OrderTypeEnum
+enum OrderEnum
 {
     case ASCENDING;
     case DESCENDING;

@@ -3,7 +3,7 @@
 namespace falmar\DualSortedLinkList\Tests;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
-use falmar\DualSortedLinkList\Enums\OrderTypeEnum;
+use falmar\DualSortedLinkList\Enums\OrderEnum;
 use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
 use PHPUnit\Framework\TestCase;
 
@@ -50,7 +50,7 @@ class StringSortedListListTest extends TestCase
 
     public function testDescInsert()
     {
-        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderEnum::DESCENDING);
 
         $list->insert('a');
         $list->insert('b');
@@ -63,7 +63,7 @@ class StringSortedListListTest extends TestCase
 
     public function testDescInsertRandom()
     {
-        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderEnum::DESCENDING);
 
         $list->insert('b');
         $list->insert('c');
@@ -76,7 +76,7 @@ class StringSortedListListTest extends TestCase
 
     public function testDescInsertReverse()
     {
-        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderTypeEnum::DESCENDING);
+        $list = new TestableSortedLinkList(ListTypeEnum::STRING, OrderEnum::DESCENDING);
 
         $list->insert('c');
         $list->insert('b');

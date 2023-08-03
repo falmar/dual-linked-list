@@ -3,7 +3,7 @@
 namespace falmar\DualSortedLinkList\Tests;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
-use falmar\DualSortedLinkList\Enums\OrderTypeEnum;
+use falmar\DualSortedLinkList\Enums\OrderEnum;
 use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
 use PHPUnit\Framework\TestCase;
 
@@ -14,7 +14,7 @@ class TypedSortedListListTest extends TestCase
         $list = new TestableSortedLinkList(ListTypeEnum::STRING);
 
         $this->assertEquals(ListTypeEnum::STRING, $list->getType());
-        $this->assertEquals(OrderTypeEnum::ASCENDING, $list->getOrder());
+        $this->assertEquals(OrderEnum::ASCENDING, $list->getOrder());
 
         $list = new TestableSortedLinkList(ListTypeEnum::INTEGER);
         $this->assertEquals(ListTypeEnum::INTEGER, $list->getType());
@@ -23,13 +23,13 @@ class TypedSortedListListTest extends TestCase
     public function testWithOrder()
     {
         $list = new TestableSortedLinkList();
-        $this->assertEquals(OrderTypeEnum::ASCENDING, $list->getOrder()); // default
+        $this->assertEquals(OrderEnum::ASCENDING, $list->getOrder()); // default
 
-        $list = new TestableSortedLinkList(null, OrderTypeEnum::DESCENDING);
-        $this->assertEquals(OrderTypeEnum::DESCENDING, $list->getOrder());
+        $list = new TestableSortedLinkList(null, OrderEnum::DESCENDING);
+        $this->assertEquals(OrderEnum::DESCENDING, $list->getOrder());
 
-        $list = new TestableSortedLinkList(null, OrderTypeEnum::ASCENDING);
-        $this->assertEquals(OrderTypeEnum::ASCENDING, $list->getOrder());
+        $list = new TestableSortedLinkList(null, OrderEnum::ASCENDING);
+        $this->assertEquals(OrderEnum::ASCENDING, $list->getOrder());
     }
 
     public function testUnknown()

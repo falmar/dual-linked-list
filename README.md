@@ -65,13 +65,14 @@ interface SortedLinkListInterface
 // ./examples/basic.php
 use falmar\DualSortedLinkList\SortedLinkListProvider;
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
+use \falmar\DualSortedLinkList\Enums\OrderEnum;
 use falmar\DualSortedLinkList\Node;
 
 include_once __DIR__ . '/../vendor/autoload.php';
 
-// Use the provider to create a sorted link list given an enum type.
+// Use the provider to create a sorted link list given an enum type and order 
 $provider = new SortedLinkListProvider();
-$list = $provider->makeList(ListTypeEnum::INTEGER);
+$list = $provider->makeList(ListTypeEnum::INTEGER, OrderEnum::ASCENDING);
 
 $list->insert(2);
 $list->insert(1);

@@ -3,7 +3,7 @@
 namespace falmar\DualSortedLinkList\Tests;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
-use falmar\DualSortedLinkList\Enums\OrderTypeEnum;
+use falmar\DualSortedLinkList\Enums\OrderEnum;
 use falmar\DualSortedLinkList\Node;
 use falmar\DualSortedLinkList\SortedLinkList;
 
@@ -19,7 +19,7 @@ class TestableSortedLinkList extends SortedLinkList
         return $this->type;
     }
 
-    public function getOrder(): OrderTypeEnum
+    public function getOrder(): OrderEnum
     {
         return $this->order;
     }

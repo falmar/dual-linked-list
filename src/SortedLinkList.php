@@ -3,17 +3,17 @@
 namespace falmar\DualSortedLinkList;
 
 use falmar\DualSortedLinkList\Enums\ListTypeEnum;
-use falmar\DualSortedLinkList\Enums\OrderTypeEnum;
+use falmar\DualSortedLinkList\Enums\OrderEnum;
 use falmar\DualSortedLinkList\Exceptions\InvalidTypeException;
 
 class SortedLinkList implements SortedLinkListInterface
 {
     protected ?ListTypeEnum $type = null;
-    protected OrderTypeEnum $order;
+    protected OrderEnum $order;
     protected ?Node $head = null;
     protected ?Node $tail = null;
 
-    public function __construct(?ListTypeEnum $type = null, $order = OrderTypeEnum::ASCENDING)
+    public function __construct(?ListTypeEnum $type = null, $order = OrderEnum::ASCENDING)
     {
         $this->type = $type;
         $this->order = $order;
@@ -45,7 +45,7 @@ class SortedLinkList implements SortedLinkListInterface
             }
 
             // Check sort order and insert accordingly
-            $comparison = $this->order === OrderTypeEnum::ASCENDING ? $current->value > $value : $current->value < $value;
+            $comparison = $this->order === OrderEnum::ASCENDING ? $current->value > $value : $current->value < $value;
             if ($comparison) {
                 $node = new Node($value, $current);
 
