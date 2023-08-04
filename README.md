@@ -1,6 +1,8 @@
 # Dual Sorted Linked List
 
 [![PHPUnit Test](https://github.com/falmar/dual-linked-list/actions/workflows/test.yaml/badge.svg)](https://github.com/falmar/dual-linked-list/actions/workflows/test.yaml)
+    
+> disclaimer: its called "dual" due to the string/int type, not because it is a doubly linked list. 
 
 This package provides a sorted linked list implementation, allowing you to insert, search, delete, and display values in
 a sorted order. The values can be either integers or strings but not both.
